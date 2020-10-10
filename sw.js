@@ -25,3 +25,7 @@ self.addEventListener('push', function (e) {
     }
     e.waituntil(self.registration.sendNotification('test message', options));
 })
+
+self.addEventListener('activate', function () {
+    console.log('SW Activated');
+});
