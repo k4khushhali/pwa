@@ -23,7 +23,7 @@ self.addEventListener('push', function (e) {
             }
         ]
     }
-    e.waituntil(self.registration.sendNotification('test message', options));
+    e.waituntil(self.registration.showNotification('test message', options));
 })
 
 self.addEventListener('activate', function () {
