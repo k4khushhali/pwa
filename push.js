@@ -13,6 +13,6 @@ let vepidKyes = {
 // webpush.setGCMAPIKey('AIzaSyDtizmd_RRy9dj2aS4THrcAgRek9y0DoEI');
 webpush.setVapidDetails(vepidKyes.subject, vepidKyes.publicKey, vepidKyes.privateKey);
 
-let sub = { "endpoint": "https://fcm.googleapis.com/fcm/send/dZiaDBRZ2qU:APA91bHY9HHItsVkKqEY9xqv_mAYXY__wIRXcZqwoISzMlNlZgyPGrTb3YK1fdZjkfCaX4yq1esK4TtagNo9veOcMPgbkH5HFQx3ivfC2bhXB1M37wjWqZnIWOGfzKiQyAA6G-msj7je", "expirationTime": null, "keys": { "p256dh": "BNMqVHstoPZkPKkxvkp0znDMl4aaOzLe1xsSCU0tW1AJ_V7qn3U6dU3S_rRwGQ-tTRo3QzD2uIP3anr0SS2Vlmo", "auth": "-v0o4ERK3cyhijyeG30Dkw" } }
+let sub = {"endpoint":"https://fcm.googleapis.com/fcm/send/f4Agb-u3FXg:APA91bEoVHkYFO0IoF0xBhd4jarbcbUAFlcCiyUPZfY4yBIVA9v9K-hxn1tI6_FMqhsocxIisS10GD-AkCBjnjEYgZAMjaW5c33bS3vprFwhffdUg_wV3aS4GZsTcVTYM3lKElX4mX8P","expirationTime":null,"keys":{"p256dh":"BL89c4gYHNQMELjw1SuInKIHqa6rnFZCDXu_sa70AfkepAGhsFFW43Bwc5yQJbcUO0j21yE5cI48PuuMyJ_la44","auth":"ii2IWzNIIGPUirmUiulKwQ"}}
 
 webpush.sendNotification(sub, 'test message')
