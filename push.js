@@ -1,7 +1,7 @@
-const webpush = require('web-push');
+const push = require('web-push');
 
 // VAPID keys should only be generated only once.
-// const vapidKeys = webpush.generateVAPIDKeys();
+// const vapidKeys = push.generateVAPIDKeys();
 // console.log(vepidKyes);
 
 let vepidKyes = {
@@ -10,9 +10,9 @@ let vepidKyes = {
     privateKey: '44QnmNOKY5de24G2W8A-nwceysUrlnD_cwLkg9OqYHY'
 }
 
-// webpush.setGCMAPIKey('AIzaSyDtizmd_RRy9dj2aS4THrcAgRek9y0DoEI');
-webpush.setVapidDetails(vepidKyes.subject, vepidKyes.publicKey, vepidKyes.privateKey);
+// push.setGCMAPIKey('AIzaSyDtizmd_RRy9dj2aS4THrcAgRek9y0DoEI');
+push.setVapidDetails(vepidKyes.subject, vepidKyes.publicKey, vepidKyes.privateKey);
 
 let sub = {"endpoint":"https://fcm.googleapis.com/fcm/send/f4Agb-u3FXg:APA91bEoVHkYFO0IoF0xBhd4jarbcbUAFlcCiyUPZfY4yBIVA9v9K-hxn1tI6_FMqhsocxIisS10GD-AkCBjnjEYgZAMjaW5c33bS3vprFwhffdUg_wV3aS4GZsTcVTYM3lKElX4mX8P","expirationTime":null,"keys":{"p256dh":"BL89c4gYHNQMELjw1SuInKIHqa6rnFZCDXu_sa70AfkepAGhsFFW43Bwc5yQJbcUO0j21yE5cI48PuuMyJ_la44","auth":"ii2IWzNIIGPUirmUiulKwQ"}}
 
-webpush.sendNotification(sub, 'test message')
+push.sendNotification(sub, 'test message')
